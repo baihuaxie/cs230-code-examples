@@ -99,7 +99,7 @@ def loss_fn(outputs, labels):
           demonstrates how you can easily define a custom loss function.
     """
     num_examples = outputs.size()[0]
-    return -torch.sum(outputs[range(num_examples), labels])/num_examples
+    return torch.sum(outputs[range(num_examples), labels])/num_examples
 
 
 def accuracy(outputs, labels):
